@@ -1,0 +1,185 @@
+/* Réinitialisation des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../Images/background.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 10px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.problem {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* S'assure que le bouton reste toujours au-dessus */
+}
+
+.problem:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.underline {
+  width: 80%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+
+.card1, .card2 {
+  width: 450px;
+  height: 650px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer; /* Ajoute un curseur cliquable */
+}
+
+.card1 {
+  background-image: url('../Images/cars-background.webp');
+}
+
+.card2 {
+  background-image: url('../Images/background-moto.webp');
+}
+
+.card1:hover, .card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cards a {
+  display: block; /* Rend le lien cliquable sur toute la carte */
+  width: 100%;
+  height: 100%;
+  text-align: center; /* Centre le texte */
+  text-decoration: none;
+  position: relative;
+}
+
+.cards a span {
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.card1:hover a span {
+  color: #ff3333;
+}
+
+.card2:hover a span {
+  color: #3399ff;
+}
+
+/* Responsive Design: Écrans de moins de 768px (tablettes et mobiles) */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card1, .card2 {
+    width: 100%;
+    height: 500px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .problem {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  .cards a span {
+    font-size: 24px;
+  }
+}
+
+/* Responsive Design: Écrans de moins de 480px (mobiles) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .problem {
+    font-size: 29px;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .cards a span {
+    font-size: 19px;
+  }
+
+  .card1, .card2 {
+    height: 400px;
+  }
+}

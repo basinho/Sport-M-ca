@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../Images/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixe l'image de fond */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin: 10px auto;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+p {
+  text-align: center; /* Centre tous les paragraphes */
+  color: white;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: center;
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.underline {
+  width: 80%;
+  height: 1px;
+  background-color: #ffffff50;
+  margin: 10px auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.circuit_f1 {
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/Austin_circuit.svg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.rallye {
+  width: 30vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/Central_European_rally_Logo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.rallye2 {
+  margin-left: 100px;
+  width: 30vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/plaque_japon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.circuit_wec {
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/Circuit_Bahrain.svg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.circuit_imsa {
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/Road_Atlanta_track_map.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.circuit_NASCAR {
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/Charlotte_Motor_Speedway_diagram.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.circuit_motogp {
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/philip_island-removebg-preview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.circuit_SBK{
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-image: url('../Images/images-removebg-preview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+
+.circuit_f1, .rallye, .rallye2, .circuit-wec, .circuit_imsa, .circuit_NASCAR, .circuit_motogp, .circuit_SBK h2{
+  margin-top:0px;
+  width: 25vh;
+  height: 25vh;
+  border: 5px solid rgb(126, 124, 124);
+  border-radius: 25%;
+  background-color: rgb(126, 124, 124);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circuit_f1:hover, .rallye:hover, .rallye2:hover, .circuit_wec:hover, .circuit_imsa:hover, .circuit_NASCAR:hover, .circuit_motogp:hover, .circuit_SBK:hover{
+  transform: scale(1.1);
+}
+
+.session-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour chaque jour */
+  gap: 10px;
+  text-align: center;
+  color: white;
+  margin-left:20px;
+}
+
+.session-info h3 {
+  margin-bottom: 5px;
+}
+
+.session-info p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left:15%;
+  width: 70%;
+  height:-20%;
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 20px;
+}
+
+.text-section p {
+  color: white;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 2s ease-in forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-section {
+  width: 100%;
+  height: 250px; /* Ajuste cette hauteur selon la taille de ton image */
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  margin-bottom: 20px;
+}
+.image-f1 {
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/F1.svg.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-wrc {
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/WRC-logo.jpg");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-wec {
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/FIA_WEC_Logo_2019.svg.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-imsa {
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/International_Motor_Sports_Association-Logo.wine.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-NASCAR{
+    width: 100%;
+    height: 150px;
+    background-image: url("../Images/NASCAR.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image-indycar{
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/INDYCAR_logo.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-motogp{
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/Moto_Gp_logo.svg.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-SBK{
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/SBK_Motul_Landscape_Full-Colour_RGB_OnLight.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-MXGP{
+  width: 100%;
+  height: 150px;
+  background-image: url("../Images/mxgp_1.png");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.image-f1, .image-wrc, .image-wec, .image-imsa, .image-NASCAR, .image-indycar, .image-motogp, .image-SBK, .image-MXGP{
+  width: 100%;
+  height: 150px;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.image-f1:hover, .image-wrc:hover, .image-wec:hover, .image-imsa:hover, .image-NASCAR:hover, .image-indycar:hover, .image-motogp:hover, .image-SBK:hover, .image-MXGP:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInFooter 1.5s forwards;
+}
+
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: rotate(360deg);
+}
+
+.button.canalPlus, .button.rtbf, .button.f1tv, .button.wrc, .button.wectv, .button.eurosport, .button.imsatv, .button.automoto {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.canalPlus{
+  background-image: url("../Images/canal+.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.rtbf {
+  background-image: url("../Images/unnamed.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.f1tv {
+  background-image: url("../Images/31xqvr1KuxL.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.wrc {
+  background-image: url("../Images/rallytv.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.wectv{
+  background-image: url("../Images/wectv.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.eurosport{
+  background-image: url("../Images/eurosport.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.imsatv{
+  background-image: url("../Images/imsatv.webp");
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button.automoto{
+    background-image: url("../Images/automoto.jpg");
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

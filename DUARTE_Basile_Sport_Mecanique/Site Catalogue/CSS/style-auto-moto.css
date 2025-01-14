@@ -1,0 +1,331 @@
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../Images/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Utilisation de min-height pour une meilleure réactivité */
+    color: white;
+}
+
+/* Onglets de l'en-tête */
+.header {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10; /* Assure que l'en-tête est au-dessus des cartes */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../Images/accueil-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tab {
+    font-size: 35px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: red;
+}
+
+.tab.active1 {
+    color: blue;
+}
+
+.divider {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.underline {
+    width: 50%;
+    height: 1px;
+    background-color: #ffffff50;
+    margin: 10px auto;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
+    width: 80vw;  /* Réduit la largeur du carrousel */
+    max-width: 800px; /* Largeur maximale */
+    height: 80vh;  /* Réduit la hauteur du carrousel */
+    max-height:700px;
+    margin-top: 100px; /* Assure qu'il y a suffisamment d'espace pour l'en-tête */
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Conteneur slides */
+.slides {
+    height: 90%; /* Réduit la hauteur des slides */
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease; 
+}
+
+/* Chaque slide */
+.slide {
+    display: flex;
+    width: 100%; /* Réduit la largeur des slides */
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Carousel items */
+.item {
+    width: 80%; /* Réduit la largeur des cartes */
+    height: 100%; /* Réduit la hauteur des cartes */
+    background-color: grey;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Change la direction pour empiler le titre et le contenu */
+    justify-content: flex-end; /* Positionner le contenu en bas */
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Hérite de la couleur du parent */
+    position: relative; /* Position pour les titres */
+    z-index: 1; /* Assure que les cartes sont en dessous de l'en-tête */
+}
+
+.item h3 {
+    font-size: 24px; /* Réduit la taille du titre */
+    font-weight: bold; /* Gras */
+    color: white; /* Couleur du titre */
+    margin: 20px; /* Ajoute un espacement pour que le titre soit à l'intérieur de la carte */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le titre */
+}
+
+/* Effet gonflé au survol des slides */
+.slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.arrow {
+    font-size: 30px; /* Augmente la taille des flèches */
+    color: white; /* Couleur des flèches */
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Centré verticalement */
+    transform: translateY(-50%);
+    z-index: 2; /* Assure que les flèches sont au-dessus */
+    padding: 15px; /* Espace autour des flèches */
+    background: rgba(0, 0, 0, 0.8); /* Fond sombre pour les flèches */
+    border-radius: 50%; /* Flèches arrondies */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    transition: background 0.3s; /* Transition pour le survol */
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.7); /* Changement de couleur au survol */
+    color: black; /* Change la couleur de l'icône au survol */
+}
+
+/* Position des flèches */
+.arrow.left {
+    left: 20px; /* Positionne à gauche */
+}
+
+.arrow.right {
+    right: 20px; /* Positionne à droite */
+}
+
+/* Mouvement des slides voitures */
+#slide1:checked ~ .slides {
+    transform: translateX(0); 
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%); 
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slides {
+    transform: translateX(-300%); 
+}
+
+#slide5:checked ~ .slides {
+    transform: translateX(-400%); 
+}
+
+#slide6:checked ~ .slides {
+    transform: translateX(-500%); 
+}
+
+/* Mouvement des slides motos */
+#slide7:checked ~ .slides {
+    transform: translateX(0); 
+}
+
+#slide8:checked ~ .slides {
+    transform: translateX(-100%); 
+}
+
+#slide9:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Images des slides voiture */
+.slide1 {
+    background-image: url('../Images/f1-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide2 {
+    background-image: url('../Images/WRC-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+.slide3 {
+    background-image: url('../Images/wec-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+.slide4 {
+    background-image: url('../Images/IMSA-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide5 {
+    background-image: url('../Images/NASCAR-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide6 {
+    background-image: url('../Images/indycar-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20%;
+}
+
+/* Images des slides motos */
+.slide7 {
+    background-image: url('../Images/motoGP-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide8 {
+    background-image: url('../Images/SBK_item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+.slide9 {
+    background-image: url('../Images/MXGP-item.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75%;
+}
+
+
+
+/* Pour les écrans de 768px et moins */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90vw; /* Réduit la largeur du carrousel */
+        height: 60vh; /* Permet aux cartes de s'ajuster automatiquement */
+        margin-top: 100px; /* Ajuste le margin supérieur */
+    }
+
+    .slide, .item {
+        width: 100%; /* Les slides prennent toute la largeur */
+        height: auto; /* Ajuste la hauteur automatiquement */
+    }
+
+    .item {
+        font-size: 18px; /* Réduit la taille de la police */
+        padding: 10px; /* Ajoute un peu de padding */
+    }
+
+    .arrow {
+        font-size: 36px; /* Réduit la taille des flèches */
+        padding: 10px; /* Ajoute un padding autour des flèches */
+    }
+}
+
+/* Pour les écrans de 480px et moins */
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px; /* Réduit la taille de la police de l'en-tête */
+    }
+
+    .item {
+        font-size: 16px; /* Réduit encore plus la taille de la police */
+    }
+
+    .arrow {
+        font-size: 28px; /* Réduit la taille des flèches pour les petits écrans */
+        padding: 5px; /* Réduit le padding autour des flèches */
+    }
+
+    .carousel {
+        margin-top: 80px; /* Réduit le margin supérieur pour les petits écrans */
+    }
+
+    .item h3 {
+        font-size: 16px;
+    }
+    
+    .slide3{
+        background-position:center 20px;
+    }
+}
